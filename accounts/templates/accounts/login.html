@@ -1,11 +1,27 @@
 {% extends 'base.html' %}
 
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
 {% block title %}login{% endblock %}
 
 {% block content %}
     <form action="" method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="login" class="btn btn-info">
+        <div style="border: 1px solid black; width: 600px; height: 600px; text-align: center">
+            <div style="width: 600px; height: 100px; background: #0d6efd; color: white; font-size: 60px; text-align: center">
+                Z-Tech
+            </div>
+            <p>LOGIN</p>
+            <div style="margin-top: 50px;">
+                이름<br>
+                {{ form.username }}
+            </div>
+            <div style="margin-top: 50px;">
+                비밀번호<br>{{ form.password }}
+            </div>
+            <input type="submit" value="login" class="btn btn-info" style="margin-top: 50px; width: 300px;">
+        </div>
     </form>
 {% endblock %}
+
