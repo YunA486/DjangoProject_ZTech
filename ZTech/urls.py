@@ -22,8 +22,9 @@ import z_tech.views
 from z_tech.views import TechListView
 
 urlpatterns = [
-    path('', TechListView.as_view(), name='home'),
-    path('', z_tech.views.list_tech, name='home'),
+    path('', include('main.urls')),
+    path('mypage', TechListView.as_view(), name='home'),
+    path('mypages', z_tech.views.list_tech, name='home'),
     path('z_tech/', include('z_tech.urls')),
     path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),

@@ -5,8 +5,8 @@ from main import views
 app_name = 'main'
 
 urlpatterns = [
-    path('main/', name='main'),
-    path('what/', name='what'),
-    path('saving/', name='saving'),
-    path('investment/', name='investment'),
+    path('', views.main, name='main'),
+    path('what/', views.what, name='what'),
+    path('saving/', views.saving, name='saving'),
+    path('investment/', views.investment, name='investment'),
 ]

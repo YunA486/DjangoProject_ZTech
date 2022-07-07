@@ -104,3 +104,5 @@ def modify_tech(request, pk):
         tech = Tech.objects.get(pk=pk)  # pk에 해당하는 bookmark 정보 가져오자
         form = TechChangeForm(instance=tech)  # bookmark 정보 넣은 form
     return render(request, 'z_tech/tech_update.html', {'form': form})
+
+
