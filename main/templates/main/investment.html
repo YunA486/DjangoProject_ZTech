@@ -1,10 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    INVESTMENT!!!
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+       <h2 style="text-align: center">INVESTMENT!!</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+  </main><!-- End #main -->
+    <div style="margin-top: 7vh; margin-left: 5vh;">
+        <div class="row m-auto">
+          <div class="col-4" style="width: 300px">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">투자</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">CMA</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">펀드</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">주식</a>
+            </div>
+          </div>
+          <div class="col-8" style="padding-left: 10vh">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                  <h1>투자</h1>
+                  <br>
+                  <div class="row">
+
+                      <div class="col-lg-6 order-1 order-lg-2 hero-img">
+                          <img src="/static/img/saving.png" class="img-fluid" alt="">
+                      </div>
+
+                      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                          <p>저축 이란 돈을 모으는 것으로, 주로 은행에 저축을 하고 그 대가로 이자 를 받게 됩니다.</p>
+                          <p>저축을 하면 미래에 돈이 필요할 때 사용할 수 있으며, 꼭 필요한 소비만 하게 되어 낭비를 줄일 수 있고,</p>
+                          <p>돈이 필요한 사람이나 기업에 은행이 돈을 빌려줄 수도 있습니다.</p>
+                      </div>
+
+                  </div>
+              </div>
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                  <h1>CMA</h1>
+                  <br>
+                  <p>CMA는 은행의 시중 자유 입출금통장과 성격이 비슷합니다.</p></p>
+                  <p>다만 은행이 아닌 증권사나 종권사에서 발행한다는 점, 원금 손실 가능성이 있다는 점이 자유 입출금 통장과 다릅니다.</p>
+                  <p>CMA는 고객이 주식을 구매하기 위해 증권 회사에 일시 보관하던 금액을 증권사가 기업 어음(CP), 양도성 예금(CD), 국공채 등 </p>
+                  <p>우량 채권에 투자하여 발생한 수익을 고객에게 돌려주는 상품입니다. </p>
+                  <p>CMA는 종금형, RP형, MMF형, MMW형으로 분류됩니다.</p>
+                  <p>종금형의 특징은 고정금리이고 예금자 보호가 된다는 점입니다. </p>
+                  <p>RP형은 환매조건부 채권에 투자하여 수익금을 전달하는데 </p>
+                  <p>이때 환매조건부채권이란 증권 회사가 일정 기간이 지난 후 확적 금리로 되사간다는 것을 담보로 판매하는 채권입니다.</p>
+                  <p>MMF형은 증권사가 아닌 자산 운용사들이 직접 투자해 수익이 나면 고객에게 지급합니다. </p>
+                  <p>RP형보다 수익률은 좋지만 덜 안전하기 때문에 수익을 중시하는 분들이 가입하시면 좋습니다. </p>
+                  <p>MMW형은 한국증권금융에 위탁하여 수익을 받는 상품입니다.</p>
+
+              </div>
+              <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                  <h1>펀드</h1>
+                  <br>
+                  <p>특정 목적을 위해 모인 돈을 모두 펀드라고 합니다.</p>
+                  <p>금융 기관에서 투자를 목적으로 사람들의 돈을 모아 펀드를 모집합니다. </p>
+                  <p>가입한 사람들의 돈을 펀드 매니저가 다른 곳에 투자를 하며 내는 수익 내고, 배당금이란 이름으로 그 수익을 나눠 가지게 됩니다. </p>
+                  <p>내가 주식 투자를 하는 것보다 더 안전하다 느낄 수 있지만, 이 투자 상품도 원금보장이 되지 않습니다.</p>
+
+              </div>
+              <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                  <h1>주식</h1>
+                  <br>
+                  <div class="row">
+
+                      <div class="col-lg-6 order-1 order-lg-2 hero-img">
+                          <img src="/static/img/saving.png" class="img-fluid" alt="">
+                      </div>
+
+                      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                          <p>가장 대표적인 투자 상품입니다. </p>
+                          <p>기업이 대규모 자금 조달을 하기 위해 발행한 주식을 매입하여 시세차익과 배당금을 수익으로 얻게되는 투자 상품입니다. </p>
+                          <p>수익성이 높지만, 변동성이 커 큰 돈을 잃을 수도 있습니다.</p>
+                      </div>
+
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+{% endblock %}

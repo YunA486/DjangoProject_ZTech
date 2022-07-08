@@ -1,10 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    SAVING!!!
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+       <h2 style="text-align: center">SAVING!!</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+  </main><!-- End #main -->
+    <div style="margin-top: 7vh; margin-left: 5vh;">
+        <div class="row m-auto">
+          <div class="col-4" style="width: 300px">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">저축</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">예·적금 상품</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">주택 청약 종합 저축</a>
+            </div>
+          </div>
+          <div class="col-8" style="padding-left: 10vh">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                  <h1>저축</h1>
+                  <br>
+                  <div class="row">
+
+                      <div class="col-lg-6 order-1 order-lg-2 hero-img">
+                          <img src="/static/img/saving.png" class="img-fluid" alt="">
+                      </div>
+
+                      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                          <p>저축 이란 돈을 모으는 것으로, 주로 은행에 저축을 하고 그 대가로 이자 를 받게 됩니다.</p>
+                          <p>저축을 하면 미래에 돈이 필요할 때 사용할 수 있으며, 꼭 필요한 소비만 하게 되어 낭비를 줄일 수 있고,</p>
+                          <p>돈이 필요한 사람이나 기업에 은행이 돈을 빌려줄 수도 있습니다.</p>
+                      </div>
+
+                  </div>
+              </div>
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                  <h1>예·적금 상품</h1>
+                  <br>
+                  <p>저축상품의 종류로는 예금 과 적금 이 있습니다.</p>
+                  <p>예금은 보통예금과 정기예금으로 나뉘는데, </p>
+                  <p>보통예금 은 입출금이 자유로운 대신 이자가 적은 특징이 있고,</p>
+                  <p>정기예금 은 큰 돈을 한꺼번에 정해진 기간 맡기는 것으로</p>
+                  <p>기간이 길수록 이자가 커지게 됩니다.</p>
+                  <p>정기적금 은 매달 일정 금액을 정해진 기간 납입하여 이후 한꺼번에 찾는 것으로,</p>
+                  <p>정기예금과 같이 기간이 길수록 더 많은 이자를 받게 됩니다.</p>
+
+                  <p>이자 는 원금 외에 추가로 받는 돈으로,</p>
+                  <p>원금에 대한 이자의 비율을 이자율 또는 금리 라고 합니다.</p>
+                  <p>시간이 지날수록 물가가 오르면 가진 돈의 가치가 떨어지게 되는데,</p>
+                  <p>이를 보전하기 위해 은행에 돈을 저축하여 이자를 받을 수 있습니다.</p>
+                  </p>
+
+              </div>
+              <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                  <h1>주택 청약 종합 저축</h1>
+                  <br>
+                  <p>주택 마련을 돕기 위해 시행되는 대한민국의 금융 상품이다. </p>
+                  <p>2009년 5월 6일부터 가입이 시작되었으며, 보통 아파트를 청약할 때 사용한다. </p>
+                  <p>'청약'이 이름에 붙어있듯이 주택청약에 당첨되지 못하면 그냥 적금통장 기능밖에 안 된다.</p>
+
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+{% endblock %}
