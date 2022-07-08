@@ -9,22 +9,21 @@ from z_tech.forms import TechCreationForm, TechChangeForm
 from z_tech.models import Tech
 
 
-class TechListView(ListView):
-    model = Tech
-
-    def get_queryset(self):
-        user = self.request.user
-        if user.is_authenticated:  # 로그인 하면, 로그인한 사용자의 북마크만 보이자
-            profile = Profile.objects.get(user=user)  # user -> profile
-            tech_list = Tech.objects.filter(profile=profile)  # profile -> bookmark_list
-        else:  # 로그인 안하면,
-            tech_list = Tech.objects.none()  # 북마크 보이지 말자
-        return tech_list
-
+# class TechListView(ListView):
+#     model = Tech
+#
+#     def get_queryset(self):
+#         user = self.request.user
+#         if user.is_authenticated:  # 로그인 하면, 로그인한 사용자의 북마크만 보이자
+#             profile = Profile.objects.get(user=user)  # user -> profile
+#             tech_list = Tech.objects.filter(profile=profile)  # profile -> bookmark_list
+#         else:  # 로그인 안하면,
+#             tech_list = Tech.objects.none()  # 북마크 보이지 말자
+#         return tech_list
 
 class TechCreateView(LoginRequiredMixin, CreateView):
     model = Tech
-    fields = ['profile', 'name', 'url']  # '__all__'
+    fields = ['profile', 'name', 'url', 'year']  # '__all__'
     template_name_suffix = '_create'  # bookmark_form.html -> bookmark_create.html
     success_url = reverse_lazy('z_tech:list')
 
@@ -40,7 +39,7 @@ class TechDetailView(LoginRequiredMixin, DetailView):
 
 class TechUpdateView(LoginRequiredMixin, UpdateView):
     model = Tech
-    fields = ['name', 'url']  # '__all__'
+    fields = ['name', 'url', 'year']  # '__all__'
     template_name_suffix = '_update'  # bookmark_update.html
 
 class TechDeleteView(LoginRequiredMixin, DeleteView):

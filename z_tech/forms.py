@@ -2,7 +2,6 @@ from django import forms
 
 from z_tech.models import Tech
 
-
 class TechCreationForm(forms.ModelForm):
     url = forms.CharField(label='링크', widget=forms.TextInput)
 

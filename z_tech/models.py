@@ -7,6 +7,7 @@ from accounts.models import Profile
 class Tech(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=10)
+    updated_at = models.DateTimeField(auto_now=True)
     url = models.URLField()
 
     # 연도별 로드맵
@@ -17,20 +18,21 @@ class Tech(models.Model):
     goal = models.PositiveIntegerField(default=0)
 
     # 진행도
-    class Percent(models.IntegerChoices):
-        zero = 0
-        one = 10
-        two = 20
-        three = 30
-        four = 40
-        five = 50
-        six = 60
-        seven = 70
-        eight = 80
-        nine = 90
-        ten = 100
+    Percent = (
+        ('zero', '0'),
+        ('one', '10'),
+        ('two', '20'),
+        ('three', '30'),
+        ('four', '40'),
+        ('five', '50'),
+        ('six', '60'),
+        ('seven', '70'),
+        ('eight', '80'),
+        ('nine', '90'),
+        ('ten', '100'),
+    )
 
-    percent = models.IntegerField(choices=Percent.choices, default='zero')
+    percent = models.CharField(max_length=30, choices=Percent, default='zero',)
 
     # 돈을 모아야 하는 이유
     reason = models.CharField(max_length=100)

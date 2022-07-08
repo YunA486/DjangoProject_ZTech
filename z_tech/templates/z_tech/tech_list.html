@@ -4,19 +4,13 @@
 
 {% block content %}
 <div class="btn-group" style="margin-top: 85px">
-    {% if user.is_authenticated %}
-        <a href="{% url 'z_tech:add' %}" class="btn btn-success">Add Tech</a>
-        <a href="{% url 'accounts:logout' %}" class="btn btn-light">logout</a>
-    {% else %}
-        <a href="{% url 'accounts:register' %}" class="btn btn-warning">register</a>
-        <a href="{% url 'accounts:login' %}" class="btn btn-info">login</a>
-    {% endif %}
+    <a href="{% url 'z_tech:add' %}" class="btn btn-success">Add Tech</a>
 </div>
 <table class="table">
     <thead>
     <tr>
         <th>#</th>
-        <th>Name</th>
+        <th>Scenario Name</th>
         <th>URL</th>
         <th>Edit</th>
         <th>Delete</th>
