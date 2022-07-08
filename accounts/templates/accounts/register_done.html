@@ -3,6 +3,11 @@
 {% block title %}register DONE{% endblock %}
 
 {% block content %}
-    {{ profile }}님, 환영합니다.
-    <a href="{% url 'accounts:login' %}">로그인</a>
+    <section id="services" class="services section-bg" style="height: 81vh; margin-top: 84px;">
+      <div class="container" style="text-align: center">
+        <h1>{{ profile }}님, 환영합니다.</h1>
+
+        <a href="{% url 'accounts:login' %}" class="btn btn-get-started" style="color: white; background: #49b5e7; margin-top: 40px">로그인</a>
+      </div>
+    </section><!-- End Services Section -->
 {% endblock %}

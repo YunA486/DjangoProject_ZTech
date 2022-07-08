@@ -1,27 +1,36 @@
 {% extends 'base.html' %}
 
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/login.css' %}">
-
 {% block title %}login{% endblock %}
 
 {% block content %}
-    <form action="" method="post">
-        {% csrf_token %}
-        <div style="border: 1px solid black; width: 600px; height: 600px; text-align: center">
-            <div style="width: 600px; height: 100px; background: #0d6efd; color: white; font-size: 60px; text-align: center">
-                Z-Tech
-            </div>
-            <p>LOGIN</p>
-            <div style="margin-top: 50px;">
-                이름<br>
-                {{ form.username }}
-            </div>
-            <div style="margin-top: 50px;">
-                비밀번호<br>{{ form.password }}
-            </div>
-            <input type="submit" value="login" class="btn btn-info" style="margin-top: 50px; width: 300px;">
+
+    <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" style="padding:0; height: 100vh;">
+
+    <div class="container" style="height: 100%">
+      <div class="row">
+        <div class="col-lg-6 order-1 order-lg-1 hero-img">
+          <img src="/static/img/login.png" class="img-fluid" alt="">
         </div>
-    </form>
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-2 d-flex flex-column justify-content-center">
+            <h1>Jump In Z-Tech</h1>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div style="margin-top: 20px">
+                    이름<br>
+                    {{ form.username }}
+                </div>
+                <div style="margin-top: 20px;">
+                    비밀번호<br>{{ form.password }}
+                </div>
+                <input type="submit" value="login" class="btn-get-started scrollto" style="border: none">
+            </form>
+        </div>
+
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
 {% endblock %}
 

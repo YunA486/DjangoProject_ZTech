@@ -1,5 +1,6 @@
 from django.contrib.auth import logout, authenticate, login, REDIRECT_FIELD_NAME
 from django.contrib.auth.decorators import login_required
+
 from django.shortcuts import render, redirect
 
 from accounts.forms import RegisterForm, LoginForm
@@ -36,4 +37,4 @@ def my_login(request):
 @login_required
 def my_logout(request):
     logout(request)
-    return redirect('z_tech:list')
+    return redirect('main:index')

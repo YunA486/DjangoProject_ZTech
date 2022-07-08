@@ -3,12 +3,15 @@
 {% block title %}delete Tech{% endblock %}
 
 {% block content %}
-<form action="" method="post">
-    {% csrf_token %}
-    <div class="alert alert-danger">
-        너 북마크 {{ tech }} 진짜 지울거야?
+    <div style="margin-top: 85px">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="alert alert-danger">
+                너 북마크 {{ tech }} 진짜 지울거야?
+            </div>
+            <input type="submit" value="진짜 삭제" class="btn btn-danger">
+            <input type="button" value="지우지마" onclick="history.back();" class="btn btn-light">
+        </form>
     </div>
-    <input type="submit" value="진짜 삭제" class="btn btn-danger">
-    <input type="button" value="지우지마" onclick="history.back();" class="btn btn-light">
-</form>
+
 {% endblock %}

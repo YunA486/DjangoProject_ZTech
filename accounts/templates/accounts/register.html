@@ -3,9 +3,20 @@
 {% block title %}register{% endblock %}
 
 {% block content %}
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="register" class="btn btn-primary">
-    </form>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg" style="height: 81vh; margin-top: 84px;">
+      <div class="container">
+        <div class="section-title">
+          <h2>SIGN UP!</h2>
+        </div>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Sign UP" class="btn btn-get-started" style="color: white; background: #49b5e7; width: 200px; border: none">
+        </form>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
 {% endblock %}

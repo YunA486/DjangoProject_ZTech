@@ -3,7 +3,7 @@
 {% block title %}Ztech List{% endblock %}
 
 {% block content %}
-<div class="btn-group">
+<div class="btn-group" style="margin-top: 85px">
     {% if user.is_authenticated %}
         <a href="{% url 'z_tech:add' %}" class="btn btn-success">Add Tech</a>
         <a href="{% url 'accounts:logout' %}" class="btn btn-light">logout</a>
